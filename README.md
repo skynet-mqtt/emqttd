@@ -1,8 +1,6 @@
 EMQ 2.1.2
 =========
 
-[![Build Status](https://travis-ci.org/synrc/emqttd.svg?branch=master)](https://travis-ci.org/synrc/emqttd)
-
 Features
 --------
 
@@ -10,7 +8,7 @@ Features
 * Persistent Routes: [mqtt_topic, mqtt_router]
 * Persistent Subscriptions: [mqtt_subproperty, mqtt_subscription, mqtt_subscriber]
 * KVS database: [ets, mnesia, redis, aerospike, mongodb]
-* MAD and REBAR compatible
+* REBAR3 compatible
 
 Try
 ---
