@@ -15,8 +15,7 @@ Try
 
 ```shell
 $ git clone git://synrc.com/synrc/emqttd && cd emqttd
-$ rebar get-deps compile ct
-$ mad rep
+$ rebar3 get-deps shell
 ```
 
 Credits
