@@ -79,7 +79,7 @@ npid() ->
 
     % later, when the pid format changes, handle the different format
     ExternalTermFormatVersion = 131,
-    PidExtType = 103,
+    PidExtType = 88,
     <<ExternalTermFormatVersion:8,
       PidExtType:8,
       PidBin/binary>> = erlang:term_to_binary(self()),
