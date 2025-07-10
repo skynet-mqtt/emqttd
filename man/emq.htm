@@ -1,41 +1,41 @@
 <html><head><meta charset="utf-8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" /><meta name="author" content="Maxim Sokhatsky" /><title>EMQ</title>
+<meta name="description" content="" /><meta name="author" content="Maxim Sokhatsky" /><title>MQTT</title>
     <link rel="stylesheet" href="https://n2o.dev/blank.css" />
     <link rel="stylesheet" href="https://n2o.dev/zima.css" />
     <link rel="stylesheet" href="https://n2o.dev/pro/pro.css" />
 </head><body><nav>
     <a href="https://erp.uno/en/">ERP</a>
-    <a href="https://mq.erp.uno" style="background:#ededed;">EMQ</a>
+    <a href="https://mqtt.erp.uno" style="background:#ededed;">MQTT</a>
 </nav><header>
-    <a href="https://github.com/erpuno"><img src="https://openmoji.org/data/color/svg/1F4DF.svg" /></a>
-    <h1>EMQ</h1>
+    <a href="https://github.com/skynet64/emqttd"><img src="https://openmoji.org/data/color/svg/1F4DF.svg" /></a>
+    <h1>MQTT</h1>
 </header><aside>
     <article>
         <section>
             <h3>SYNOPSIS</h3>
-            <div>ERP.UNO EMQ is an embeddable version of EMQ 2.1.2, the lightweight MQTT 3.1.1 server for Erlang by Feng Lee.
+            <div>MQTT is an embeddable version of EMQ 2.1.2, the lightweight MQTT 5.0 server for Erlang by Feng Lee.
             </div><br/>
         <figure>
-        <code> $ rebar3</code>
+        <code> $ git clone git@github.com:skynet64/emqttd</code>
         </figure>
             <h3>RELEASE NOTES</h3>
             <div>
-            <ul><li><a href="#">EMQ 2.1.2</a> <font class="desk" color="#00b8cf">13 FEB 2018</font></li></ul>
+            <ul><li><a href="#">MQTT 7.0</a> <font class="desk" color="#00b8cf">13 FEB 2018</font></li></ul>
             </div>
         </section>
 
         <section>
             <a name="plugin"></a><h3>USAGE</h3>
-            <div> EMQ is available as rebar3 dependency.
-                  After successful compilation open admin
-                  dashboard with admin:public credentials
-                  at <a href="http://localhost:18083">localhost:18083</a>.</div><br/>
+            <div> EMQ is available as one of rebar3 dependencies: emqttd and emq_dashboard.
+                  The first is server only instance and the latter is server alogin with dashboard.
+                  It can be accessed after start of emq_dashboard application
+                  at <a href="http://localhost:18083">localhost:18083</a> by using admin:skynet credentials.</div><br/>
 <figure><code> $ rebar3 get-deps
  $ rebar3 shell</code></figure><br/>
             <div>
-                OCT 2020 © 5HT ISC<br />
-                VER 1.10 0.7
+                OCT 2025 © 5HT ISC<br />
+                VER 7.0
             </div>
 
         </section>
@@ -69,7 +69,8 @@ $ rebar3 shell
 ===> Verifying dependencies...
 ===> Analyzing applications...
 ===> Compiling emqttd
-Erlang/OTP 24 [erts-12.2.1] [source] [64-bit] [smp:12:12] [ds:12:12:10] [async-threads:1] [jit]
+Erlang/OTP 24 [erts-12.2.1] [source] [64-bit]
+[smp:12:12] [ds:12:12:10] [async-threads:1] [jit]
 
 Eshell V12.2.1  (abort with ^G)
 1> starting emqttd on node 'nonode@nohost'
@@ -91,6 +92,8 @@ emqttd 2.1.2 is running now
 ===> Booted emqttd
        </code>
         </figure>
+
+        <p>Applications List.</p>
 
         <figure>
         <code>
