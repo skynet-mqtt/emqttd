@@ -14,8 +14,8 @@ Try
 ---
 
 ```shell
-$ git clone git://synrc.com/synrc/emqttd && cd emqttd
-$ rebar3 get-deps shell
+$ git clone git@github.com:skynet64/emqttd && cd emqttd
+$ rebar3 shell
 ```
 
 Credits
