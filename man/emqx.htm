@@ -1,0 +1,135 @@
+<html><head><meta charset="utf-8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" /><meta name="author" content="Maxim Sokhatsky" /><title>EMQX</title>
+    <link rel="stylesheet" href="https://n2o.dev/blank.css" />
+    <link rel="stylesheet" href="https://n2o.dev/zima.css" />
+    <link rel="stylesheet" href="https://n2o.dev/pro/pro.css" />
+</head><body><nav>
+    <a href="https://erp.uno/en/">ERP</a>
+    <a href="https://mq.erp.uno" style="background:#ededed;">EMQX</a>
+</nav><header>
+    <a href="https://github.com/erpuno"><img src="https://openmoji.org/data/color/svg/1F4DF.svg" /></a>
+    <h1>EMQX</h1>
+</header><aside>
+    <article>
+        <section>
+            <h3>SYNOPSIS</h3>
+            <div>ERP.UNO MQ-EMQX is an embeddable version of EMQX EDGE,
+                 the lightweight MQTT 5.0 server for Erlang by Feng Lee.
+            </div><br/>
+        <figure>
+        <code> $ mad get erpuno/mq</code>
+        </figure>
+            <h3>RELEASE NOTES</h3>
+            <div>
+            <ul><li><a href="https://tonpa.guru/stream/2019/2019-02-13%20Новая%20версия%20XIO.htm">MQ 0.2</a> <font class="desk" color="#00b8cf">13 FEB 2018</font></li></ul>
+            </div>
+        </section>
+
+        <section>
+            <a name="plugin"></a><h3>USAGE</h3>
+            <div> MQ is available as rebar3/mad/mix dependency.
+                  After successful compilation open admin
+                  dashboard with admin:public credentials
+                  at <a href="http://localhost:18083">localhost:18083</a>.</div><br/>
+<figure><code> $ mix deps.get
+ $ iex -S mix</code></figure><br/>
+            <div>
+                OCT 2020 © 5HT ISC<br />
+                VER 1.10 0.7
+            </div>
+
+        </section>
+    </article>
+</aside><main>
+    <section>
+        <a name="js"></a><h3>EMQ X 4.2</h3>
+
+        <p>Install Elixir (Mac).</p>
+
+        <figure>
+        <code>
+ $ brew install elixir
+       </code>
+        </figure>
+
+       <p>Compile XIO</p>
+
+        <figure>
+        <code>
+ $ mix deps.get
+ $ mix compile
+        </code>
+        </figure>
+
+        <p>Example of success run.</p>
+
+        <figure>
+        <code>
+ $ MIX_ENV=prod iex -S mix
+ Erlang/OTP 22 [erts-10.4.3] [source] [64-bit] [smp:4:4]
+               [ds:4:4:10] [async-threads:1] [hipe] [dtrace]
+
+ Starting emqx on node nonode@nohost
+ Start mqtt:ws listener on 0.0.0.0:8083 successfully.
+ EMQ X Broker 0.0.0+build.1.ref2cbfb2b is running now!
+ Start http:management listener on 8080 successfully.
+ Start http:dashboard listener on 18083 successfully.
+ Interactive Elixir (1.9.0) - press Ctrl+C to exit (type h() ENTER for help)
+ iex(1)>
+       </code>
+        </figure>
+
+        <figure>
+        <code>
+> :application.which_applications
+[
+  {:xio, 'XIO EMQ X 3.0 Elixir', '0.7.0'},
+  {:emqx_dashboard, 'EMQ X Dashboard', '3.0'},
+  {:emqx_management, 'EMQ X Management API and CLI', '3.0'},
+  {:clique, 'A CLI library for erlang', '0.0.0+build.1.ref063ba94'},
+  {:minirest, 'MINI REST for COWBOY and JSX', '0.1.0+build.45.ref61953ad'},
+  {:emqx, 'EMQ X Broker', '0.0.0+build.1.ref2cbfb2b'},
+  {:lager, 'Erlang logging framework', '3.2.2'},
+  {:goldrush, 'Erlang event stream processor', '0.1.9'},
+  {:syntax_tools, 'Syntax tools', '2.2'},
+  {:ssl_verify_fun, [], '1.1.4'},
+  {:getopt, 'Command-line options parser for Erlang', '0.8.2'},
+  {:ekka, 'Autocluster and Autoheal for EMQ X Broker', '0.5.3'},
+  {:mnesia, 'MNESIA  CXC 138 12', '4.16'},
+  {:neotoma, 'PEG parser-generator.', '1.7.4'},
+  {:replayq, 'A Disk Queue for Log Replay in Erlang', '0.1.1'},
+  {:cowboy, 'COWBOY Small, fast, modern HTTP server.', '2.5.0'},
+  {:ranch, 'RANCH Socket TCP protocols.', '1.6.2'},
+  {:cowlib, 'COWLIB Web protocols.', '2.6.0'},
+  {:esockd, 'ESOCKD Non-blocking TCP/SSL Server', '5.4.4'},
+  {:gen_rpc, 'RPC library for BEAM languages', '0.0.0+build.1.ref537ac86'},
+  {:jsx, 'JSX JSON parsing toolkit', '2.9.0'},
+  {:cuttlefish, 'cuttlefish configuration abstraction',
+   '2.0.11+build.547.refef77856'},
+  {:kvs, 'KVS Abstract Chain Database', '6.7.7'},
+  {:gproc, 'Extended process registry for Erlang', '0.8.0'},
+  {:rocksdb, 'ROCKSDB STUB', '0.6.0'},
+  {:hex, 'hex', '0.20.1'},
+  {:inets, 'INETS  CXC 138 49', '7.0.8'},
+  {:ssl, 'Erlang/OTP SSL application', '9.3.3'},
+  {:public_key, 'Public key infrastructure', '1.6.7'},
+  {:asn1, 'The Erlang ASN1 compiler version 5.0.9', '5.0.9'},
+  {:crypto, 'CRYPTO', '4.5.1'},
+  {:mix, 'mix', '1.9.0'},
+  {:iex, 'iex', '1.9.0'},
+  {:elixir, 'elixir', '1.9.0'},
+  {:compiler, 'ERTS  CXC 138 10', '7.4.2'},
+  {:stdlib, 'ERTS  CXC 138 10', '3.9.2'},
+  {:kernel, 'ERTS  CXC 138 10', '6.4.1'}
+]
+       </code>
+        </figure>
+
+        <br /><br />
+
+    </section>
+
+</main><footer>
+    Made with <span class="heart">❤</span> to EMQ
+</footer></body></html>
